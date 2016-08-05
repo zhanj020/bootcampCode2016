@@ -1,6 +1,14 @@
 int step = 0;
+PFont myFont;
 
 void setup(){
+  size(300,300);
+  myFont=createFont("Rosewood Std Regular",40);
+  textAlign(CENTER);
+  textSize(20);
+  textFont(myFont);
+  background(0);
+  text("Illusion",-50,height/2-20,400,50);
   println("You are one of the Four Horsemen and was performing illusions on the stage");
   println("Suddenly the lights were off. You were knocked down and fainted out");
   println("Now you wake up and find yourself in an unlocked room in Macau");
@@ -13,7 +21,7 @@ void over(){
   println("YOU DIE");
 }
 
-void draw(){}
+
 
 void keyPressed(){
   if ( key == 'r' && step == 0){
@@ -29,7 +37,7 @@ void keyPressed(){
     println("You found a perfect timing to run outside to the street");
     println("Now you are on the street and you are hungry");
     println("Do you run or eat?");
-    println("Press r for run, e for eat");
+    println("Press r to run, e to eat");
     step = 2;
   }else if (key == 'f' && step == 2){
     println(" "); 
@@ -73,7 +81,7 @@ void keyPressed(){
   }else if (key == 'h' && step == 5){
      println(" ");
      println("The owner is a part of the EYE");
-     println("Great! You found other Horseme!");
+     println("Great! You found other Horsemen!");
   }else if (key == 'c' && step == 4){
      println(" ");
      println("Fell over");
@@ -87,7 +95,7 @@ void keyPressed(){
      step = 5;
    }else if ( key == 'r' && step == 5){  
      println(" ");
-     println("You were still chasing by the gangsters");
+     println("You were still chased by the gangsters");
      println(" ");
      println("Do you choose a crowded restaurant or a magic store with few people to hide ");
      println("Press 1 for restaurant, 2 for magic store");
