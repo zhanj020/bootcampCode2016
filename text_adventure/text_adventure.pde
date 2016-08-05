@@ -1,12 +1,12 @@
 int step = 0;
-PFont myFont;
+PFont Rosewoodfont;
 
 void setup(){
   size(300,300);
-  myFont=createFont("Rosewood Std Regular",40);
+  Rosewoodfont=createFont("Rosewood Std Regular",40);
   textAlign(CENTER);
   textSize(20);
-  textFont(myFont);
+  textFont(Rosewoodfont);
   background(0);
   text("Illusion",-50,height/2-20,400,50);
   println("You are one of the Four Horsemen and was performing illusions on the stage");
@@ -21,7 +21,7 @@ void over(){
   println("YOU DIE");
 }
 
-
+void draw(){}
 
 void keyPressed(){
   if ( key == 'r' && step == 0){
@@ -42,12 +42,13 @@ void keyPressed(){
   }else if (key == 'f' && step == 2){
     println(" "); 
     over();
+    println("Come on, you are not that strong");
   }else if (key == 'm'&& step == 2){
      println(" ");
      println("You get a cute rabbit!");
      println(" ");
      println("Do you want to use it?");
-     println("Press y to use, n to not use");
+     println("Press y for yes, n for no");
      step = 3; 
   }else if (key == 'y' && step == 3){
      println(" ");
@@ -81,7 +82,7 @@ void keyPressed(){
   }else if (key == 'h' && step == 5){
      println(" ");
      println("The owner is a part of the EYE");
-     println("Great! You found other Horsemen!");
+     println("Great! You found the other Horsemen!");
   }else if (key == 'c' && step == 4){
      println(" ");
      println("Fell over");
@@ -110,7 +111,7 @@ void keyPressed(){
      over();   
    }else if ( key == '2' && step == 6){ 
      println(" ");
-     println("Yay! You found your partners in the store");
+     println("YAY! You found your partners in the store");
    }else if ( key == 'r' && step == 1){
      println(" ");
      println("You ran into a police station");
@@ -125,7 +126,7 @@ void keyPressed(){
      println("GAME OVER");
    }else if ( key == 'c' && step == 2){
      println(" ");
-     println("FBI traced you.You were arrested");
+     println("FBI were tracing you.You were arrested");
      println(" ");
      println("GAME OVER");
    }else if ( key == 'e' && step == 2){
