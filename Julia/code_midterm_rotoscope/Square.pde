@@ -11,7 +11,7 @@ class MySquare{
     ypos=_ypos;
     w=_width;
     num=_num;
-    col = color(random(256), random(256),  random(256), random(100,256));
+    col = color(random(100,256), random(100,256),  random(100,256), random(100,256));
   }
 
   void drawSquare(){
